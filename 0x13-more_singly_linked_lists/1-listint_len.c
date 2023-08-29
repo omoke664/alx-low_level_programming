@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "lists.h"
 
 /**
@@ -7,15 +6,16 @@
  *
  * Return: number of nodes
  */
-size_t listint_len(const listint_t *h);
+size_t listint_len(const listint_t *h)
 {
-	size_t count = 0;
+	size_t num = 0;
 
-	while (h!= NULL)
+	while (h)
 	{
+		num++;
 		h = h->next;
-		count++;
 	}
 
-	return count;
+	return (num);
 }
+
